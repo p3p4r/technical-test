@@ -67,4 +67,38 @@ composer install --ignore-platform-reqs
 ```
 
 ## Your Notes
-This is a place for you to add your notes, plans, thinking and any feedback you have for us of the task, please feel free to include whatever you like here, we'll make sure to read it. 
+
+### Run
+After executing successfully the initial configurations open a terminal in project folder.
+And execute the following commands:
+- `php artisan artisan migrate | php artisan artisan migrate:fresh`
+- `php artisan db:seed`
+-
+### Acceptance Criteria
+We'd like you to build an application that will display an example wind farm, its turbines and their components. We'd like to be able to see components and their grades (measurement of damage/wear) ranging between 1 - 5.
+
+### Requirements
+- [] Display a list of turbine inspections
+- [] Each Turbine should have a number of components
+- [] A component can be given a grade from 1 to 5 (1 being perfect and 5 being completely broken/missing)
+- [] Use Laravel Models to represent the Entities in the task.
+
+### TO-DO
+- [] Create Entities
+- [] Create Dumb Data
+- [] Display a list of turbine inspections
+- [] Display a list of turbine inspections with Grade
+- [] UX/UI w/tailwind
+- [] Use Unit tests
+- [] React
+- [] Use of API auth
+
+
+### Entities
+- Users w/Roles(Admin, Inspectors)
+- Roles
+- Farms
+- Turbines
+- Components
+- Inspections
+- Grades
