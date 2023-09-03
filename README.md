@@ -73,7 +73,10 @@ After executing successfully the initial configurations open a terminal in proje
 And execute the following commands:
 - `php artisan artisan migrate | php artisan artisan migrate:fresh`
 - `php artisan db:seed`
--
+- `./vendor/bin/sail yarn dev`
+
+Edit Styles
+- `./vendor/bin/sail artisan tailwindcss:watch`
 ### Acceptance Criteria
 We'd like you to build an application that will display an example wind farm, its turbines and their components. We'd like to be able to see components and their grades (measurement of damage/wear) ranging between 1 - 5.
 
