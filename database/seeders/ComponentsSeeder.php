@@ -14,6 +14,6 @@ class ComponentsSeeder extends Seeder
      */
     public function run()
     {
-        Component::factory(20)->create();
+        Component::factory(4)->create();
     }
 }

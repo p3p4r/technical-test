@@ -71,8 +71,8 @@ composer install --ignore-platform-reqs
 ### Run
 After executing successfully the initial configurations open a terminal in project folder.
 And execute the following commands:
-- `php artisan artisan migrate | php artisan artisan migrate:fresh`
-- `php artisan db:seed`
+- `./vendor/bin/sail artisan migrate | php artisan migrate:fresh`
+- `./vendor/bin/sail artisan db:seed | php artisan db:seed`
 - `./vendor/bin/sail yarn dev`
 
 Edit Styles
@@ -81,17 +81,17 @@ Edit Styles
 We'd like you to build an application that will display an example wind farm, its turbines and their components. We'd like to be able to see components and their grades (measurement of damage/wear) ranging between 1 - 5.
 
 ### Requirements
-- [] Display a list of turbine inspections
-- [] Each Turbine should have a number of components
-- [] A component can be given a grade from 1 to 5 (1 being perfect and 5 being completely broken/missing)
-- [] Use Laravel Models to represent the Entities in the task.
+- [x] Display a list of turbine inspections
+- [x] Each Turbine should have a number of components
+- [x] A component can be given a grade from 1 to 5 (1 being perfect and 5 being completely broken/missing)
+- [x] Use Laravel Models to represent the Entities in the task.
 
 ### TO-DO
-- [] Create Entities
+- [x] Create Entities
 - [] Create Dumb Data
 - [] Display a list of turbine inspections
 - [] Display a list of turbine inspections with Grade
-- [] UX/UI w/tailwind
+- [x] UX/UI w/tailwind
 - [] Use Unit tests
 - [] React
 - [] Use of API auth

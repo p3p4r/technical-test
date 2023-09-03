@@ -18,7 +18,12 @@ class ComponentFactory extends Factory
     public function definition()
     {
         return [
-            'name' => Str::random(20),
+            'name' => $this->faker->unique()->randomElement([
+                'Blade',
+                'Rotor',
+                'Hub',
+                'Generator',
+            ]),
             'description' => Str::random(30),
             'created_at' => now(),
             'updated_at' => now(),

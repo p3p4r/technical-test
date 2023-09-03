@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\InspectionController;
+use App\Models\Inspection;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/inspections');
+});
+
+Route::prefix('inspections')->group(function () {
+    Route::get('/', [InspectionController::class, 'index']);
 });
