@@ -2,17 +2,16 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class RouteTest extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function test_the_application_returns_a_successful_response()
+    public function testTheApplicationReturnsSuccessfulResponse()
     {
         $response = $this->get('/inspections');
 
@@ -24,7 +23,7 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_the_application_redirects_successfully()
+    public function testApplicationRedirectsSuccessfully()
     {
         $response = $this->get('/');
 
@@ -37,7 +36,7 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_the_application_returns_a_successful_response_with_text()
+    public function testApplicationReturnsSuccessfulResponseWithText()
     {
         $response = $this->get('/inspections');
 
