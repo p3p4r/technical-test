@@ -1,6 +1,5 @@
-## About Software Development @ Cyberhawk
-
-need some content for this section
+## @Cyberhawk Tech Test
+[![Product Name Screen Shot][product-screenshot]]()
 
 ## The task
 We've designed this task to try and give you the ability to show us what you can do and hopefully flex your technical and creative muscles. You can't show off too much here, show us you at your best and wow us!
@@ -122,3 +121,6 @@ Regarding to implement react, although I have experience with it, I decided not 
 My main struggles were the fact that I'm currently not working with laravel, so I had to search the how-to-dos in the current laravel project and aligning to my PHP and previous laravel knowledge.
 
 So I ended up spending more time reseaching and re-learning.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[product-screenshot]: /.demo/project_img.jpg
