@@ -71,10 +71,11 @@ composer install --ignore-platform-reqs
 ### Run
 After executing successfully the initial configurations open a terminal in project folder.
 And execute the following commands:
-- `./vendor/bin/sail artisan migrate | php artisan migrate:fresh`
-- `./vendor/bin/sail artisan db:seed | php artisan db:seed`
+- `./vendor/bin/sail artisan migrate` or in project folder `php artisan migrate:fresh`
+- `./vendor/bin/sail artisan db:seed` or in project folder `php artisan db:seed`
 - `./vendor/bin/sail yarn dev`
-
+- All set ready to view in `https://localhost`
+### Dev commands
 Edit Styles
 - `./vendor/bin/sail artisan tailwindcss:watch`
 ### Acceptance Criteria
@@ -88,14 +89,13 @@ We'd like you to build an application that will display an example wind farm, it
 
 ### TO-DO
 - [x] Create Entities
-- [] Create Dumb Data
-- [] Display a list of turbine inspections
-- [] Display a list of turbine inspections with Grade
+- [x] Create Dumb Data
+- [x] Display a list of turbine inspections
+- [x] Display a list of turbine inspections with Grade
 - [x] UX/UI w/tailwind
 - [] Use Unit tests
 - [] React
 - [] Use of API auth
-
 
 ### Entities
 - Users w/Roles(Admin, Inspectors)
@@ -105,3 +105,19 @@ We'd like you to build an application that will display an example wind farm, it
 - Components
 - Inspections
 - Grades
+
+### UML
+
+
+### Thought Process
+After reading and analysing the requiremnets I started to split the process into small chunks/tasks.
+Then started to write and design the ententies. Although I have ententies implemented that are not being used due to lack of time.
+Initially expected to do at least one CRUD operation for one entity.
+Regarding to the design it's part of my entity to add a little by a spark in the UX/UI, so I made a simple and clean.
+
+Regarding to implement react, although I have experience with it, I decided not to implement because I needed to manage the remaing time I had.
+
+#### Obstacles/Strugles
+My main struggles were the fact that I'm currently not working with laravel, so I had to search the how-to-dos in the current laravel project and aligning to my PHP and previous laravel knowledge.
+
+So I ended up spending more time reseaching and re-learning.

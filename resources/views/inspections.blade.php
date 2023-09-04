@@ -88,14 +88,20 @@
                                     Status
                                 </th>
 
-                                <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">User</th>
-
-                                <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">Components</th>
-
-                                <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">Notes</th>
+                                <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    User
+                                </th>
 
                                 <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                    Date
+                                    Components
+                                </th>
+
+                                <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    Inspection date
+                                </th>
+
+                                <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    Created at
                                 </th>
 
                                 <th scope="col" class="relative py-3.5 px-4">
@@ -108,7 +114,7 @@
                         <tr>
                                 <td class="px-2 py-2 text-sm font-medium whitespace-nowrap">
                                     <div>
-                                        <h2 class="font-medium text-gray-800 dark:text-white ">{{$inspection->id}}</h2>
+                                        <h2 class="font-medium text-gray-800 dark:text-white ">{{$inspection->id ?? '0'}}</h2>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium whitespace-nowrap">
@@ -120,7 +126,7 @@
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
                                     <div class="flex items-center">
-                                        {{$inspection->user->email}}
+                                        {{$inspection->user->email ?? '-'}}
                                     </div>
                                 </td>
 
@@ -129,10 +135,12 @@
                                 @if (isset($inspection->turbine->components))
                                         @foreach ($inspection->turbine->components as $component)
                                         <div class="group relative flex flex-col">
+                                            @if ($component->name)
                                             <img class="group-hover:opacity-60" src="{{ asset('/icons/' . strtolower($component->name) .'.svg') }}" alt="{{$component->name}}" width="20" height="20"/>
-                                            <span class="group-hover:opacity-60">{{$component->pivot->grade_id}}</span>
+                                            @endif
+                                            <span class="group-hover:opacity-60">{{$component->pivot->grade_id ?? '-'}}</span>
                                             <span class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2-translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">
-                                            {{$component->name}}
+                                            {{$component->name ?? '-'}}
                                             </span>
                                         </div>
                                         @endforeach
@@ -142,11 +150,11 @@
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                    Lotema sadsa das das
+                                {{$inspection->inspection_date ?? '0000-00-00 00:00:00'}}
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                    {{$inspection->inspection_date}}
+                                {{$inspection->created_at ?? '0000-00-00 00:00:00'}}
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
