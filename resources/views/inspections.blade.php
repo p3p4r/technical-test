@@ -110,18 +110,18 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                        @foreach($inspections as $inspection)
-                        <tr>
+                            @foreach($inspections as $inspection)
+                            <tr>
                                 <td class="px-2 py-2 text-sm font-medium whitespace-nowrap">
                                     <div>
                                         <h2 class="font-medium text-gray-800 dark:text-white ">{{$inspection->id ?? '0'}}</h2>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium whitespace-nowrap">
-                                <button class="px-5 py-2 text-xs font-medium text-gray-600 transition-colors duration-200 sm:text-sm">
-                                    <div class="inline px-3 py-1 text-sm font-normal rounded-full gap-x-2 {{ $inspection->status ==='A' ? 'text-emerald-500 bg-emerald-100/60 dark:bg-emerald-800 hover:bg-emerald-100' : 'text-gray-500 bg-gray-100 dark:text-gray-400 dark:bg-gray-800' }}">
-                                    {{ $inspection->status ==='A' ? 'Active' : 'Disabled' }}
-                                    </div>
+                                    <button class="px-5 py-2 text-xs font-medium text-gray-600 transition-colors duration-200 sm:text-sm">
+                                        <div class="inline px-3 py-1 text-sm font-normal rounded-full gap-x-2 {{ $inspection->status ==='A' ? 'text-emerald-500 bg-emerald-100/60 dark:bg-emerald-800 hover:bg-emerald-100' : 'text-gray-500 bg-gray-100 dark:text-gray-400 dark:bg-gray-800' }}">
+                                            {{ $inspection->status ==='A' ? 'Active' : 'Disabled' }}
+                                        </div>
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
@@ -132,29 +132,29 @@
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap flex items-center justify-evenly text-center">
 
-                                @if (isset($inspection->turbine->components))
-                                        @foreach ($inspection->turbine->components as $component)
-                                        <div class="group relative flex flex-col">
-                                            @if ($component->name)
-                                            <img class="group-hover:opacity-60" src="{{ asset('/icons/' . strtolower($component->name) .'.svg') }}" alt="{{$component->name}}" width="20" height="20"/>
-                                            @endif
-                                            <span class="group-hover:opacity-60">{{$component->pivot->grade_id ?? '-'}}</span>
-                                            <span class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2-translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">
+                                    @if (isset($inspection->turbine->components))
+                                    @foreach ($inspection->turbine->components as $component)
+                                    <div class="group relative flex flex-col">
+                                        @if ($component->name)
+                                        <img class="group-hover:opacity-60" src="{{ asset('/icons/' . strtolower($component->name) .'.svg') }}" alt="{{$component->name}}" width="20" height="20" />
+                                        @endif
+                                        <span class="group-hover:opacity-60">{{$component->pivot->grade_id ?? '-'}}</span>
+                                        <span class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2-translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto">
                                             {{$component->name ?? '-'}}
-                                            </span>
-                                        </div>
-                                        @endforeach
+                                        </span>
+                                    </div>
+                                    @endforeach
                                     @else
                                     -
                                     @endif
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                {{$inspection->inspection_date ?? '0000-00-00 00:00:00'}}
+                                    {{$inspection->inspection_date ?? '0000-00-00 00:00:00'}}
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                {{$inspection->created_at ?? '0000-00-00 00:00:00'}}
+                                    {{$inspection->created_at ?? '0000-00-00 00:00:00'}}
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
