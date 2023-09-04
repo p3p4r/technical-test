@@ -76,11 +76,9 @@ And execute the following commands:
 - `./vendor/bin/sail yarn dev`
 - All set ready to view in `https://localhost`
 ### Dev commands
-Edit Styles
-- `./vendor/bin/sail artisan tailwindcss:watch`
+Edit Styles: `./vendor/bin/sail artisan tailwindcss:watch`
 
-Run tests
-- `./vendor/bin/sail artisan test`
+Run tests: `./vendor/bin/sail artisan test`
 ### Acceptance Criteria
 We'd like you to build an application that will display an example wind farm, its turbines and their components. We'd like to be able to see components and their grades (measurement of damage/wear) ranging between 1 - 5.
 
@@ -97,8 +95,8 @@ We'd like you to build an application that will display an example wind farm, it
 - [x] Display a list of turbine inspections with Grade
 - [x] UX/UI w/tailwind
 - [x] Use Unit tests
-- [] React
-- [] Use of API auth
+- [ ] React
+- [ ] Use of API auth
 
 ### Entities
 - Users w/Roles(Admin, Inspectors)
