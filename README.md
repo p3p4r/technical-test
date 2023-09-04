@@ -125,8 +125,7 @@ Regarding to the design it's part of my entity to add a little by a spark in the
 Regarding to implement react, although I have experience with it, I decided not to implement because I needed to manage the remaing time I had.
 
 #### Obstacles/Strugles
-My main struggles were the fact that I'm currently not working with laravel, so I had to search the how-to-dos in the current laravel project and aligning to my PHP and previous laravel knowledge.
-
+My main struggles were the fact that I'm currently not working with laravel, so I had to re-search although I have the teory it changes the way to done in every PHP framework.
 So I ended up spending more time reseaching and re-learning.
 
 <!-- MARKDOWN LINKS & IMAGES -->
