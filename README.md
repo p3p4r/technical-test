@@ -73,7 +73,7 @@ And execute the following commands:
 - `./vendor/bin/sail artisan migrate` or in project folder `php artisan migrate:fresh`
 - `./vendor/bin/sail artisan db:seed` or in project folder `php artisan db:seed`
 - `./vendor/bin/sail yarn dev`
-- Now're all set and ready to start opening `https://localhost`
+- Now're all set and ready to start, open `https://localhost` in your browser 
   
 ### Developer Commands
 Edit Styles: `./vendor/bin/sail artisan tailwindcss:watch`
