@@ -1,5 +1,5 @@
 ## @Cyberhawk Tech Test
-[![Product Name Screen Shot][product-screenshot]]()
+[![Project Image][product-screenshot]]()
 
 ## The task
 We've designed this task to try and give you the ability to show us what you can do and hopefully flex your technical and creative muscles. You can't show off too much here, show us you at your best and wow us!
@@ -107,7 +107,7 @@ We'd like you to build an application that will display an example wind farm, it
 - Grades
 
 ### UML
-
+[![UML Image][uml-screenshot]]()
 
 ### Thought Process
 After reading and analysing the requiremnets I started to split the process into small chunks/tasks.
@@ -123,4 +123,5 @@ My main struggles were the fact that I'm currently not working with laravel, so 
 So I ended up spending more time reseaching and re-learning.
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: /.demo/project_img.jpg
+[product-screenshot]: /.demo/main.jpg
+[uml-screenshot]: /.demo/UML.jpg
