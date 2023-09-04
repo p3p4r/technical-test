@@ -67,14 +67,15 @@ composer install --ignore-platform-reqs
 
 ## Your Notes
 
-### Run
+### How To Run
 After executing successfully the initial configurations open a terminal in project folder.
 And execute the following commands:
 - `./vendor/bin/sail artisan migrate` or in project folder `php artisan migrate:fresh`
 - `./vendor/bin/sail artisan db:seed` or in project folder `php artisan db:seed`
 - `./vendor/bin/sail yarn dev`
-- All set ready to view in `https://localhost`
-### Dev commands
+- Now're all set and ready to start opening `https://localhost`
+  
+### Developer Commands
 Edit Styles: `./vendor/bin/sail artisan tailwindcss:watch`
 
 Run tests: `./vendor/bin/sail artisan test`
@@ -87,15 +88,21 @@ We'd like you to build an application that will display an example wind farm, it
 - [x] A component can be given a grade from 1 to 5 (1 being perfect and 5 being completely broken/missing)
 - [x] Use Laravel Models to represent the Entities in the task.
 
-### TO-DO
+### Done
 - [x] Create Entities
 - [x] Create Dumb Data
 - [x] Display a list of turbine inspections
 - [x] Display a list of turbine inspections with Grade
 - [x] UX/UI w/tailwind
 - [x] Use Unit tests
+- [x] Use of coding styles guidelines PS
+- [x] Clear and logical commits 
+
+### TO-DO's
 - [ ] React
-- [ ] Use of API auth
+- [ ] Use of API authentication
+- [ ] Use of 3D
+- [ ] Use of web map technology to display data
 
 ### Entities
 - Users w/Roles(Admin, Inspectors)
