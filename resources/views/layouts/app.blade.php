@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
   <title>@yield('title') - Cyberhawk</title>
 
   <!-- Fonts -->
@@ -38,14 +39,14 @@
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <div class="relative">
-          <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
-            Users
+        <button type="button" class="{!! Request::is('/') ? 'text-yellow-500' : '' !!} flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
+            Home
           </button>
           <div class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
           </div>
         </div>
-
-        <a href="#" class="text-sm font-semibold leading-6 text-yellow-500">Inspections</a>
+        <a href="#" class="text-sm font-semibold leading-6">Users</a>
+        <a href="/inspections" class="{!! Request::is('inspections') ? 'text-yellow-500' : '' !!} text-sm font-semibold leading-6">Inspections</a>
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Roles</a>
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Farms</a>
       </div>
@@ -53,15 +54,15 @@
         <div class="px-4">
           Hi, {{auth()->user()->name ?? 'User'}}
         </div>
-          @if (auth()->check())
-          <a href="/logout" class="text-sm font-semibold leading-6 text-gray-900">
+        @if (auth()->check())
+        <a href="/logout" class="text-sm font-semibold leading-6 text-gray-900">
           Sign out <span aria-hidden="true">&rarr;</span>
-          </a>
-          @else
-          <a href="/login" class="text-sm font-semibold leading-6 text-gray-900">
+        </a>
+        @else
+        <a href="/login" class="text-sm font-semibold leading-6 text-gray-900">
           Sign In <span aria-hidden="true">&rarr;</span>
-          </a>
-          @endif
+        </a>
+        @endif
         </a>
       </div>
     </nav>
@@ -71,8 +72,8 @@
       <div class="fixed inset-0 z-10"></div>
       <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
+          <a href="/home" class="-m-1.5 p-1.5">
+            <span class="sr-only">Cyberhawk</span>
             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
@@ -87,13 +88,11 @@
             <div class="space-y-2 p-6">
               <div class="-mx-3">
                 <button type="button" class="flex w-full items-center justify-between rounded-lg p-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
-                  Users
-                  <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                  </svg>
+                  Home
                 </button>
               </div>
-              <a href="#" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inspections</a>
+              <a href="#" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+              <a href="/inspections" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inspections</a>
               <a href="#" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Farms</a>
               <a href="#" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Roles</a>
             </div>
@@ -185,6 +184,10 @@
       </div>
     </section>
   </footer>
+
+  <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+  {!! Toastr::message() !!}
 </body>
 
 </html>

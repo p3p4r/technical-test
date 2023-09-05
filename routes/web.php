@@ -1,16 +1,12 @@
 <?php
 
-use App\Enums\Roles;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\InspectionController;
-use App\Models\Role;
-use Laravel\Socialite\Facades\Socialite;
-use App\Models\User;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\{
-    Route,
-    Auth
+use App\Http\Controllers\{
+    AuthController,
+    InspectionController,
+    SocialiteController
 };
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,30 +24,12 @@ Route::get('/login', function () {
 
 Route::get('logout', [AuthController::class, 'logout']);
 
-Route::get('/auth/github', function () {
-    return Socialite::driver('github')->redirect();
-});
+Route::get('/auth/github', [SocialiteController::class, 'githubRedirect']);
 
-Route::get('/auth/callback', function () {
-    $github_user = Socialite::driver('github')->user();
+Route::get('/auth/callback', [SocialiteController::class, 'githubLogin']);
 
-    try {
-        $user = User::firstOrCreate([
-            'email' => $github_user->email,
-        ], [
-            'role_id' => Roles::INSPECTOR,
-            'name' => $github_user->name,
-            'password' => Str::random(6)
-        ]);
-
-        Auth::login($user);
-
-        return redirect('/');
-    } catch(Exception $e) {
-        // send notification to user
-        // Log error
-        return redirect('login');
-    }
+Route::get('/home', function () {
+    return view('welcome');
 });
 
 Route::get('/', function () {
