@@ -38,7 +38,7 @@ class SocialiteController extends Controller
             ]);
 
             Auth::login($user);
-            Toastr::success('You Have Successfully Login', 'Notification');
+            Toastr::success('You have successfully logged in', 'Notification');
             return redirect('/inspections'); //Prod: redirect('/');
         } catch (Exception $e) {
             // Log error
