@@ -98,6 +98,7 @@ We'd like you to build an application that will display an example wind farm, it
 - [x] Use of coding styles guidelines PSR
 - [x] Clear and logical commits
 - [x] Use of OAuth authentication (Socialite)
+- [x] Added user popup notifications
 
 ### TO-DO's
 - [ ] React
