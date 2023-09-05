@@ -104,9 +104,17 @@ We'd like you to build an application that will display an example wind farm, it
 - [ ] Use of 3D
 - [ ] Use of web map technology to display data
 
+### Thought Process
+After reading and analyzing the requirements, I began to divide the process into tasks.
+Then I started writing and designing the entities. In the process, I realized that it made sense to implement new entities, such as Roles and Farms. As inspections were mentioned, to do them an inspector would have to do them. That's why I came up with this entity, which can be scaled to implement specific functionalities. Regarding "Farm", each farm has several turbines and multiple components. This allows the data to be better structured both technologically and visually.
+
+As far as design is concerned, it's part of my entity to add a little spark to the UX/UI, so I made a simple, clean design that appeals to the consumer and is easy to use.
+
+Regarding to implement react, although I have experience with it, I decided not to implement because I needed to manage the remaing time I had.
+
 ### Entities
-- Users w/Roles(Admin, Inspectors)
-- Roles
+- Users
+- Roles (Admin, Inspectors, Client)
 - Farms
 - Turbines
 - Components
@@ -115,18 +123,6 @@ We'd like you to build an application that will display an example wind farm, it
 
 ### UML
 [![UML Image][uml-screenshot]]()
-
-### Thought Process
-After reading and analysing the requiremnets I started to split the process into small chunks/tasks.
-Then started to write and design the ententies. Although I have ententies implemented that are not being used due to lack of time.
-Initially expected to do at least one CRUD operation for one entity.
-Regarding to the design it's part of my entity to add a little by a spark in the UX/UI, so I made a simple and clean.
-
-Regarding to implement react, although I have experience with it, I decided not to implement because I needed to manage the remaing time I had.
-
-#### Obstacles/Strugles
-My main struggles were the fact that I'm currently not working with laravel, so I had to re-search although I have the teory it changes the way to done in every PHP framework.
-So I ended up spending more time reseaching and re-learning.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: /.demo/main.jpg
