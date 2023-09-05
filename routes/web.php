@@ -28,7 +28,7 @@ Route::get('/auth/github', [SocialiteController::class, 'githubRedirect']);
 
 Route::get('/auth/callback', [SocialiteController::class, 'githubLogin']);
 
-Route::get('/home', function () {
+Route::middleware(['auth'])->get('/home', function () {
     return view('welcome');
 });
 
@@ -41,4 +41,4 @@ Route::prefix('inspections')->middleware(['auth'])->group(function () {
 });
 
 // Demonstration purposes
-Route::get('/guest/view', [InspectionController::class, 'index']);
+Route::get('/guest', [InspectionController::class, 'index']);

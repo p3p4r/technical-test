@@ -24,8 +24,8 @@
   <header class="bg-white">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
+        <a href="/home" class="-m-1.5 p-1.5">
+          <span class="sr-only">Cyberhawk</span>
           <img class="h-8 w-auto" src="https://thecyberhawk.com/wp-content/uploads/2023/01/header-logo.svg" alt="">
         </a>
       </div>
@@ -46,7 +46,7 @@
           </div>
         </div>
         <a href="#" class="text-sm font-semibold leading-6">Users</a>
-        <a href="/inspections" class="{!! Request::is('inspections') ? 'text-yellow-500' : '' !!} text-sm font-semibold leading-6">Inspections</a>
+        <a href="/inspections" class="{!! (Request::is('inspections') || Request::is('guest') ) ? 'text-yellow-500' : '' !!} text-sm font-semibold leading-6">Inspections</a>
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Roles</a>
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Farms</a>
       </div>
@@ -87,12 +87,12 @@
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 p-6">
               <div class="-mx-3">
-                <button type="button" class="flex w-full items-center justify-between rounded-lg p-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
+                <button type="button" class="{!! Request::is('/') ? 'text-yellow-500' : '' !!} flex w-full items-center justify-between rounded-lg p-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
                   Home
                 </button>
               </div>
               <a href="#" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-              <a href="/inspections" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inspections</a>
+              <a href="/inspections" class="{!! (Request::is('inspections') || Request::is('guest') ) ? 'text-yellow-500' : '' !!} -mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Inspections</a>
               <a href="#" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Farms</a>
               <a href="#" class="-mx-3 block rounded-lg px-3 p-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Roles</a>
             </div>
