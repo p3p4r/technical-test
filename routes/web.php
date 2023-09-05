@@ -58,7 +58,9 @@ Route::get('/', function () {
     return redirect('/inspections');
 });
 
-
 Route::prefix('inspections')->middleware(['auth'])->group(function () {
     Route::get('/', [InspectionController::class, 'index']);
 });
+
+// Demonstration purposes
+Route::get('/guest/view', [InspectionController::class, 'index']);

@@ -95,7 +95,7 @@ We'd like you to build an application that will display an example wind farm, it
 - [x] Display a list of turbine inspections with Grade
 - [x] UX/UI w/tailwind
 - [x] Use Unit tests
-- [x] Use of coding styles guidelines PS
+- [x] Use of coding styles guidelines PSR
 - [x] Clear and logical commits
 - [x] Use of OAuth authentication (Socialite)
 

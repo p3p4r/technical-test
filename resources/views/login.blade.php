@@ -24,7 +24,7 @@
                     </a>
                 </div>
                 <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                    Don't have any of account's? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Try another alternative</a>
+                    Don't have any of account's? <a href="/guest/view" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Try another alternative</a>
                 </p>
             </div>
         </div>

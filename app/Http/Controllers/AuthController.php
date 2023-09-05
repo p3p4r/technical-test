@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     /**
-     * List of inspections
-     *
+     * Logout the user
+     * @return void
      */
     public function logout()
     {
