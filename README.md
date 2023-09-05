@@ -73,8 +73,8 @@ And execute the following commands:
 - `./vendor/bin/sail artisan migrate` or in project folder `php artisan migrate:fresh`
 - `./vendor/bin/sail artisan db:seed` or in project folder `php artisan db:seed`
 - `./vendor/bin/sail yarn dev`
-- Now're all set and ready to start, open `https://localhost` in your browser 
-  
+- Now're all set and ready to start, open `https://localhost` in your browser
+
 ### Developer Commands
 Edit Styles: `./vendor/bin/sail artisan tailwindcss:watch`
 
@@ -96,7 +96,8 @@ We'd like you to build an application that will display an example wind farm, it
 - [x] UX/UI w/tailwind
 - [x] Use Unit tests
 - [x] Use of coding styles guidelines PS
-- [x] Clear and logical commits 
+- [x] Clear and logical commits
+- [x] Use of OAuth authentication (Socialite)
 
 ### TO-DO's
 - [ ] React

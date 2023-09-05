@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\Roles;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InspectionController;
 use App\Models\Role;
 use Laravel\Socialite\Facades\Socialite;
@@ -23,7 +24,9 @@ use Illuminate\Support\Facades\{
 */
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
+
+Route::get('logout', [AuthController::class, 'logout']);
 
 Route::get('/auth/github', function () {
     return Socialite::driver('github')->redirect();
@@ -47,7 +50,7 @@ Route::get('/auth/callback', function () {
     } catch(Exception $e) {
         // send notification to user
         // Log error
-        return redirect('/login');
+        return redirect('login');
     }
 });
 
@@ -55,6 +58,7 @@ Route::get('/', function () {
     return redirect('/inspections');
 });
 
-Route::prefix('inspections')->group(function () {
+
+Route::prefix('inspections')->middleware(['auth'])->group(function () {
     Route::get('/', [InspectionController::class, 'index']);
 });

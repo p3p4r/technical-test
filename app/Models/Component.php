@@ -14,6 +14,7 @@ class Component extends Model
         'description'
     ];
 
+
     public function turbines()
     {
         return $this->belongsToMany(Turbine::class, 'turbine_components')

@@ -13,7 +13,7 @@ class RouteTest extends TestCase
      */
     public function testTheApplicationReturnsSuccessfulResponse()
     {
-        $response = $this->get('/inspections');
+        $response = $this->get('/login');
 
         $response->assertStatus(200);
     }
@@ -25,9 +25,9 @@ class RouteTest extends TestCase
      */
     public function testApplicationRedirectsSuccessfully()
     {
-        $response = $this->get('/');
+        $response = $this->get('/inspections');
 
-        $response->assertRedirect('/inspections');
+        $response->assertRedirect('/login');
         $response->assertStatus(302);
     }
 
@@ -38,8 +38,7 @@ class RouteTest extends TestCase
      */
     public function testApplicationReturnsSuccessfulResponseWithText()
     {
-        $response = $this->get('/inspections');
-
-        $response->assertSee('Inspections');
+        $response = $this->get('/login');
+        $response->assertSee('Sign in');
     }
 }
